@@ -11,10 +11,10 @@ This application created for local requirements.
 - [ ] Documentation
 - [ ] JavaDoc Documentation
 - [ ] Code Cleaning
-- [ ] Heroku Implementation
 - [ ] React Listing Frontend
 - [ ] Gui Application Get Server Ip with Parameter
 - [ ] Multilang (turkish only now)
+- [x] Heroku Implementation
 - [x] Postman Collections
 
 

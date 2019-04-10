@@ -42,3 +42,34 @@ spring:
 
 spring:
   profiles: prod
+
+---
+######### HEROKU (only overrides, h2 in-memory usage) #########
+
+spring:
+  profiles: heroku
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+server:
+  port: ${PORT:8080}
+
+---
+######### HEROKU (only overrides, mysql usage only) #########
+
+spring:
+  profiles: heroku-mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+server:
+  port: ${PORT:8080}
