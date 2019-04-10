@@ -37,8 +37,6 @@ This application created for local requirements.
 curl -X POST \
      http://localhost:8000/sendHardwareInfo \
      -H 'Content-Type: application/json' \
-     -H 'Postman-Token: 6e6a587a-bdf8-4799-b89d-621fbb4c0358' \
-     -H 'cache-control: no-cache' \
      -d '{
        "doorNo": "a101",
        "os": "Microsoft Windows 10 (Home) build 17134",
@@ -46,8 +44,8 @@ curl -X POST \
        "memoryFree": 2065846272,
        "baseboard": "HP/",
        "vendor": "HP/HP Notebook",
-       "serialNumber": "5CG6446VCW",
-       "baseboardSerialNumber": "PFXCC00WB430AZ",
+       "serialNumber": "xxxx",
+       "baseboardSerialNumber": "xxxxx",
        "cpu": {
            "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
            "physicalCore": 2,
@@ -105,15 +103,15 @@ curl -X POST \
            {
                "dns": "[192.168.185.11]",
                "gateway": "192.168.38.1",
-               "hostname": "BulutMD",
-               "domainName": "BulutMD"
+               "hostname": "pc",
+               "domainName": "pc"
            }
        ],
        "disks": [
            {
                "name": "\\\\.\\PHYSICALDRIVE0",
                "model": "SAMSUNG MZNTY256HDHP-000H1 (Standart disk sürücüleri)",
-               "serial": "S2ZPNY0H908063",
+               "serial": "xxxx",
                "size": 256052966400
            }
        ]
