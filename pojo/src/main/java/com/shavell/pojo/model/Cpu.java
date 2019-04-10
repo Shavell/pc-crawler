@@ -1,6 +1,7 @@
-package com.shavell.gui.dto;
+package com.shavell.pojo.model;
 
 import lombok.Data;
+
 import java.io.Serializable;
 
 @Data

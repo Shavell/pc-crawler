@@ -14,6 +14,7 @@
     <modules>
         <module>backend</module>
         <module>gui</module>
+        <module>pojo</module>
     </modules>
 
     <properties>

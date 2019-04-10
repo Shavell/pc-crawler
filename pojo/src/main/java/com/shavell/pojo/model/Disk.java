@@ -1,4 +1,4 @@
-package com.shavell.backend.model;
+package com.shavell.pojo.model;
 
 import lombok.Data;
 
