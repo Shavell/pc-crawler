@@ -18,6 +18,9 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
+  data:
+    rest:
+      base-path: /
 
 server:
   port: 8000
