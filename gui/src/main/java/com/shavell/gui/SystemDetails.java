@@ -1,5 +1,8 @@
 package com.shavell.gui;
 
+import com.shavell.gui.model.ComputerModel;
+import com.shavell.pojo.model.Disk;
+import com.shavell.pojo.model.Network;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import oshi.SystemInfo;
@@ -7,9 +10,6 @@ import oshi.hardware.*;
 import oshi.software.os.NetworkParams;
 import oshi.software.os.OperatingSystem;
 import oshi.util.FormatUtil;
-import com.shavell.gui.dto.Computer;
-import com.shavell.gui.dto.Disk;
-import com.shavell.gui.dto.Network;
 
 import java.util.Arrays;
 
@@ -17,9 +17,9 @@ public class SystemDetails {
 
     private static final Logger logger = LoggerFactory.getLogger(SystemDetails.class);
 
-    private static Computer computer = new Computer();
+    private static ComputerModel computer = new ComputerModel();
 
-    public Computer callDetails(String doorNo) {
+    public ComputerModel callDetails(String doorNo) {
         logger.debug("Initializing System...");
         SystemInfo si = new SystemInfo();
 

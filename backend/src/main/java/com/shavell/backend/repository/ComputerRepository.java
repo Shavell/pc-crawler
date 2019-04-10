@@ -1,8 +1,10 @@
 package com.shavell.backend.repository;
 
-import com.shavell.backend.model.Computer;
+import com.shavell.backend.entity.ComputerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ComputerRepository extends JpaRepository<Computer, Long> {
+import java.util.UUID;
+
+public interface ComputerRepository extends JpaRepository<ComputerEntity, UUID> {
 
 }

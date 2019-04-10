@@ -2,7 +2,7 @@ package com.shavell.gui.util;
 
 import com.google.gson.Gson;
 import com.shavell.gui.Controller;
-import com.shavell.gui.dto.Computer;
+import com.shavell.gui.model.ComputerModel;
 import javafx.scene.control.Alert;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Request;
@@ -16,7 +16,7 @@ public class Utils {
     static final Logger logger = LoggerFactory.getLogger(Utils.class.getName());
     private static Gson gson = new Gson();
 
-    public static void sendData(Computer computerDetails) {
+    public static void sendData(ComputerModel computerDetails) {
         try{
             HttpResponse response = (HttpResponse) createRequest(computerDetails);
             if (response.getStatusLine().getStatusCode() != 200) {
@@ -33,7 +33,7 @@ public class Utils {
         }
     }
 
-    private static HttpResponse createRequest(Computer computer) throws IOException {
+    private static HttpResponse createRequest(ComputerModel computer) throws IOException {
         String s = gson.toJson(computer);
         return Request.Post("http://localhost:8000/sendHardwareInfo")
                 .bodyString(s, ContentType.APPLICATION_JSON)

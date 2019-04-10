@@ -1,7 +1,7 @@
 package com.shavell.gui;
 
 
-import com.shavell.gui.dto.Computer;
+import com.shavell.gui.model.ComputerModel;
 import com.shavell.gui.util.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +18,7 @@ public class Controller {
     public void pressButton(ActionEvent event) throws InterruptedException {
         if(!doorNo.getText().isEmpty()){
             createWaitDialog();
-            Computer computerDetails = systemDetails.callDetails(doorNo.getText());
+            ComputerModel computerDetails = systemDetails.callDetails(doorNo.getText());
             Utils.sendData(computerDetails);
         }else {
             createAnyDialog(Alert.AlertType.ERROR, "Hata Oluştu!", null, "Oda numaranızı giriniz!");

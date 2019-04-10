@@ -1,6 +1,6 @@
 package com.shavell.backend.api;
 
-import com.shavell.backend.model.Computer;
+import com.shavell.backend.entity.ComputerEntity;
 import com.shavell.backend.repository.ComputerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,14 +20,16 @@ public class ComputerController {
     /**
      * @param computer
      */
-    @PostMapping public void create(@RequestBody Computer computer) {
+    @PostMapping
+    public void create(@RequestBody ComputerEntity computer) {
         computerRepo.save(computer);
     }
 
     /**
      * @return
      */
-    @GetMapping public List<Computer> list(){
+    @GetMapping
+    public List<ComputerEntity> list() {
         return computerRepo.findAll();
     }
 
