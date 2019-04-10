@@ -1,0 +1,41 @@
+######### DEFAULT #########
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+server:
+  port: 8000
+
+---
+######### TEST (only overrides) #########
+
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/crawler?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&verifyServerCertificate=false&useSSL=true
+    username: root
+    password: my_secret_password
+    max-active: 20
+
+---
+######### PRODUCTION (only overrides) #########
+
+spring:
+  profiles: prod
