@@ -4,6 +4,8 @@ import com.shavell.backend.model.Computer;
 import com.shavell.backend.repository.ComputerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
 @RestController
@@ -11,6 +13,9 @@ import java.util.List;
 public class ComputerController {
 
     @Autowired private ComputerRepository computerRepo;
+    @Autowired
+    private EntityManagerFactory em;
+
 
     /**
      * @param computer
