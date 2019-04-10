@@ -12,10 +12,14 @@ import java.util.List;
 @RequestMapping(value = "sendHardwareInfo")
 public class ComputerController {
 
-    @Autowired private ComputerRepository computerRepo;
-    @Autowired
+    private ComputerRepository computerRepo;
     private EntityManagerFactory em;
 
+    @Autowired
+    public ComputerController(ComputerRepository computerRepo, EntityManagerFactory em) {
+        this.computerRepo = computerRepo;
+        this.em = em;
+    }
 
     /**
      * @param computer
