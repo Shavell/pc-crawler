@@ -14,8 +14,8 @@ This application created for local requirements.
 - [ ] Heroku Implementation
 - [ ] React Listing Frontend
 - [ ] Gui Application Get Server Ip with Parameter
-- [x] Postman Collections
 - [ ] Multilang (turkish only now)
+- [x] Postman Collections
 
 
 
