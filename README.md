@@ -2,6 +2,7 @@
 
 This application created for local requirements. 
 
+![Screenshot](https://raw.githubusercontent.com/Shavell/repo-assets/master/pc-crawler/gui.png)
 
 **Application development not completed!**
 
